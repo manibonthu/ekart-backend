@@ -7,7 +7,7 @@
     "build": "npm run build-ts",
     "build-ts": "tsc",
     "start:dev": "nodemon --exec ts-node app.ts",
-    "start": "yarn run build && node dist/app.js",
+    "start": "node dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format:all": "prettier --write \"{src,app}/**/*.ts\""
   },
