@@ -28,6 +28,9 @@ export class AppRouteController implements RoutesController {
     private storeServiceImpl: StoreServiceImpl
   ) {}
   public register(app: Application): void {
+    app.get("/", (req: Request, res: Response, next: NextFunction) => {
+      res.json({ msg: "Hello world" });
+    });
     app
       .route("/admin/signup")
       .post(async (req: Request, res: Response, next: NextFunction) => {
